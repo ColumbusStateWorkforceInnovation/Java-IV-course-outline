@@ -33,7 +33,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 * __and__ the controller sets the response body to the empty list returned,
 * __and__ the controller sets the `contentType` of the response to `application/json`
 * __and__ the menu category controller returns a status of 200 OK,
-* __and__ the length of the list in the response body is 0,
+* __and__ the length of the list in the response body is 0.
 
 
 #### Scenario: get all returns a non-empty list when one or more records exist
@@ -50,7 +50,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
   * __the__ `id` property of the returned instance matches the `id` property of the corresponding item returned by the repository `findAll()` method,
   * __and__ the `categoryTitle` property of the returned instance matches the `categoryTitle` property of the corresponding item returned by the repository `findAll()` method,
   * __and__ the `categoryNotes` property of the returned instance matches the `categoryNotes` property of the corresponding item returned by the repository `findAll()` method,
-  * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property of the corresponding item returned by the repository `findAll()` method,
+  * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property of the corresponding item returned by the repository `findAll()` method.
 
 ### Get menu category by ID
 
@@ -68,7 +68,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
   * __the__ `id` property of the returned instance matches the `id` property of the corresponding item returned by the repository `findById()` method,
   * __and__ the `categoryTitle` property of the returned instance matches the `categoryTitle` property of the corresponding item returned by the repository `findById()` method,
   * __and__ the `categoryNotes` property of the returned instance matches the `categoryNotes` property of the corresponding item returned by the repository `findById()` method,
-  * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property of the corresponding item returned by the repository `findById()` method,
+  * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property of the corresponding item returned by the repository `findById()` method.
 
 
 #### Scenario: get by ID returns a 404 not found when the requested item does not exist in the database
