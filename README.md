@@ -53,7 +53,7 @@
 * Build read, update and delete methods for our API
 * Use JPA relationships to associate entity classes
 * Activities and assignments:
-    * __LAB 3:__ Read, update and delete for our API
+    * __LAB 3:__ [Read, Update, and Delete for our API](./lab-3/README.md)
 
 
 ## Week 4 - Property Validation & JPA Entity Relationships
