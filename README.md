@@ -10,8 +10,8 @@
 * HTTP as the foundation of REST
     * Describe web services and how they work
     * Be able to explain the Hypertext Transport Protocol (HTML) and associated standards
-    * Explain how Representationl State Transfer (REST) application programming interfaces APIs power web applications
-    * Show how the OpenAPI spec is used to descibe APIs
+    * Explain how Representational State Transfer (REST) application programming interfaces APIs power web applications
+    * Show how the OpenAPI spec is used to describe APIs
 * Creating our first API
     * Describe dependency management for web applications
     * Create a new Spring application using https://start.spring.io/
@@ -20,7 +20,7 @@
 * Writing our first API method
     * Develop a unit test for posting a new blog article
     * Implement a controller method to get our test passing
-* Activites and assignments:
+* Activities and assignments:
     * __In class group activity:__ [Create a base application and commit it to GitHub](./lab-0/README.md)
     * __Knowledge checks:__ Quiz on HTTP, REST, and APIs
     * __LAB 1:__ [Implementing our first API method](./lab-1/README.md)
@@ -42,7 +42,7 @@
     * Configure our new class for mocking
     * Use a mock bean for unit testing
     * Develop a complete unit test for POST
-* Activites and assignments:
+* Activities and assignments:
     * __LAB 2:__ [Mocks, Stubs, Entities, and Persistence](./lab-2/README.md)
 
 ## Week 3 - CRUD, Profiles and Postgres
@@ -52,7 +52,7 @@
 
 * Build read, update and delete methods for our API
 * Use JPA relationships to associate entity classes
-* Activites and assignments:
+* Activities and assignments:
     * __LAB 3:__ Read, update and delete for our API
 
 
@@ -61,7 +61,7 @@
 * Reading:
     * _Spring Web Essentials_ chapters 9 and 12 (skip 11)
 
-* Activites and assignments:
+* Activities and assignments:
     * __LAB 4:__ MenuItems and property validation
 
 
@@ -70,7 +70,7 @@
 * Reading:
     * _Spring Web Essentials_ chapter 11
 
-* Activites and assignments:
+* Activities and assignments:
     * __LAB 5:__ Hook up the Vue app
 
 ## Week 6 - Securing our API
@@ -78,7 +78,7 @@
 * Reading:
     * _Spring Web Essentials_ chapter 13
 
-* Activites and assignments:
+* Activities and assignments:
     * __LAB 6:__ Secure the API
 
 ## Week 7 - Server Side Websites

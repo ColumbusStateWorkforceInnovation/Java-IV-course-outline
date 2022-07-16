@@ -92,6 +92,11 @@ The diagram below shows the object model for the lab solution.
   ```
 - [ ] Right-click on your `pom.xml` file and choose "Maven > Reload Project" to refresh the project dependencies.
 
+### Setup
+
+- [ ] Create an `@Entity` class called `edu.cscc.degrees.domain.MenuCategory` with the properties, constructors, getters, and setters shown above.
+- [ ] Create an interface called `edu.cscc.degrees.data.MenuCategoryRepository` that extends `org.springframework.data.repository.CrudRepository`
+
 ### Business logic
 
 Using the techniques shown in chapters five and six of the *Spring Web Essentials* book, replace the unit test(s) you created in the previous lab with one that checks the following:
@@ -100,11 +105,11 @@ Using the techniques shown in chapters five and six of the *Spring Web Essential
 * __Given__ the menu category repository saves a new Menu Category as documented in the 
 [CrudRepository.save()](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#save-S-) method,
 * __When__ the client performs a POST request to `/api/menu/categories`,
-* __and__ the `@id` of menu category in the request body is 0
-* __and__ other menu category properties are populated
-* __then__ the controller calls the save() method on the menu category repository
-* __and__ the menu category repository returns an updated instance with a non-zero `@id` value
-* __and__ the menu category controller returns a representation of the newly saved instance in the response body
+* __and__ the `@id` of menu category in the request body is 0,
+* __and__ other menu category properties are populated,
+* __then__ the controller calls the save() method __one time__ on the menu category repository,
+* __and__ the menu category repository returns an updated instance with a non-zero `@id` value,
+* __and__ the menu category controller returns a representation of the newly saved instance in the response body,
 * __and__ the `id` property of the returned instance matches the `id` property returned by the repository `save()` method,
 * __and__ the `categoryTitle` property of the returned instance matches the `categoryTitle` property returned by the repository `save()` method,
 * __and__ the `categoryNotes` property of the returned instance matches the `categoryNotes` property returned by the repository `save()` method,
@@ -113,12 +118,14 @@ Using the techniques shown in chapters five and six of the *Spring Web Essential
 * __and__ the response contains a `Location` header with the value `http://localhost/api/menu/categories/%d` where `%d` matches the `id` property returned by the repository `save()` method.
 
 ## Notes
-
+* Update the `MenuCategoryController` to have just enough code to get your test to pass.
+* Verify the properties returned in the response body match those stubbed for the repository `save()` method.
+* Verify the repository `save()` method is called exactly one time.
 
 ## Submitting your work
 
 - [ ] Verify your tests pass.
-- [ ] Commit your changes to the lab 1 branch you created.
+- [ ] Commit your changes to the lab 2 branch you created.
 - [ ] Push your new branch to GitHub.
 - [ ] Create a pull request on the new branch.
 - [ ] Add your instructor as a reviewer.
