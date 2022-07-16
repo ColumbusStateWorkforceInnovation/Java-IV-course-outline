@@ -20,13 +20,12 @@ The diagram below shows the object model for the lab solution.
 
 ## Tasks
 
-Using the techniques shown in chapter eight of the *Spring Web Essentials* book, add unit tests for each of the scenarios listed below. After adding a test, add just enough code to get the test to pass.
+Add unit tests for each scenario listed below using the techniques shown in chapter eight of the *Spring Web Essentials* book. After adding a test, add just enough code to get the test to pass.
 
 ### Get all menu categories
 
-#### If none exist, return an empty list
+#### Scenario: get all returns an empty list when none exist
 
-* __Scenario:__ get all returns an empty list.
 * __Given__ no menu categories exist in the database,
 * __When__ the client performs a GET request to `/api/menu/categories`,
 * __then__ the controller calls the repository [`findAll()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findAll--) method one time,
@@ -37,9 +36,8 @@ Using the techniques shown in chapter eight of the *Spring Web Essentials* book,
 * __and__ the length of the list in the response body is 0,
 
 
-#### One or more categories exist
+#### Scenario: get all returns a non-empty list when one or more records exist
 
-* __Scenario:__ get all returns a non-empty list.
 * __Given__ one or more menu categories exist in the database,
 * __When__ the client performs a GET request to `/api/menu/categories`,
 * __then__ the controller calls the repository [`findAll()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findAll--) method one time,
@@ -56,15 +54,15 @@ Using the techniques shown in chapter eight of the *Spring Web Essentials* book,
 
 ### Get menu category by ID
 
-#### Valid id provided
+#### Scenario: get by ID returns a list with one item when it exists in the database
 
-* __Scenario:__ get menu category by ID returns a non-empty list.
-* __When__ the client performs a GET request to `/api/menu/categories/%d` where `%d` is any valid ID value,
-* __then__ the controller calls the repository [`findById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById-ID-) method one time,
+* __Given__ the client is attempting to retrieve a record that exists in the database,
+* __when__ the client performs a GET request to `/api/menu/categories/%d` where `%d` is any positive non-zero value,
+* __and__ the controller calls the repository [`findById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById-ID-) method one time,
 * __and__ the repository `findById()` method returns a `MenuCategory` with then given ID,
 * __and__ the controller sets the response body to a singleton list with the item returned,
 * __and__ the controller sets the `contentType` of the response to `application/json`
-* __and__ the menu category controller returns a status of 200 OK,
+* __then__ the menu category controller returns a status of 200 OK,
 * __and__ the length of the list in the response body equals 1,
 * __and__ for the single item in the response body list:
   * __the__ `id` property of the returned instance matches the `id` property of the corresponding item returned by the repository `findById()` method,
@@ -73,14 +71,57 @@ Using the techniques shown in chapter eight of the *Spring Web Essentials* book,
   * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property of the corresponding item returned by the repository `findById()` method,
 
 
-#### No category exists with that ID
+#### Scenario: get by ID returns a 404 not found when the requested item does not exist in the database
 
-* __Scenario:__ get menu category by ID returns a 404 not found.
-* __When__ the client performs a GET request to `/api/menu/categories/%d` where `%d` is any valid ID value,
-* __then__ the controller calls the repository [`findById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById-ID-) method one time,
+* __Given__ the client is attempting to retrieve a record that does not exist in the database,
+* __when__ the client performs a GET request to `/api/menu/categories/%d` where `%d` is any positive non-zero value,
+* __and__ the controller calls the repository [`findById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById-ID-) method one time,
 * __and__ the `findById()` method returns an [`Optional.empty()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Optional.html#empty()),
 * __then__ the menu category controller returns a status of 404 not found.
 
+### Update a menu category
+
+#### Scenario: saving an updated record succeeds when the record exists in the database
+
+* __Given__ the client is attempting to update a record that exists in the database,
+* __when__ the client performs a PUT request to `/api/menu/categories/%d` where `%d` is any positive non-zero value,
+* __and__ the request body contains a representation of a `MenuCategory`,
+* __and__ the controller calls the repository [`existsById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#existsById-ID-) method one time passing in the ID included in the URL,
+* __and__ the `existsById()` method returns `true`,
+* __then__ the controller calls the `save()` method on the repository one time passing a menu category instance with all properties equal to those provided in the request body,
+* __and__ the `save()` method returns an updated version of the saved record,
+* __and__ the menu category controller returns a status of 204 no content.
+
+#### Scenario: saving an updated record fails when the record does not exist in the database
+
+* __Given__ the client is attempting to update a record that does not exists in the database,
+* __when__ the client performs a PUT request to `/api/menu/categories/%d` where `%d` is any positive non-zero value,
+* __and__ the request body contains a representation of a `MenuCategory`,
+* __and__ the controller calls the repository [`existsById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#existsById-ID-) method one time passing in the ID included in the URL,
+* __and__ the `existsById()` method returns `false`,
+* __then__ the controller does **not** call the `save()` method on the repository,
+* __and__ the menu category controller returns a status of 404 not found.
+
+
+### Delete a menu category
+
+#### Scenario: delete succeeds when the record exists in the database
+
+* __Given__ the client is attempting to delete a record that exists in the database,
+* __when__ the client performs a DELETE request to `/api/menu/categories/%d` where `%d` is any positive non-zero value,
+* __and__ the controller calls the repository [`findById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById-ID-) method one time passing in the ID included in the URL,
+* __and__ the repository `findById()` method returns a `MenuCategory` with then given ID,
+* __then__ the controller calls the `delete()` method on the repository one time passing the instance returned by `findById()`,
+* __and__ the menu category controller returns a status of 204 no content.
+
+#### Scenario: attempt to delete nonexistent record fails with a 404
+
+* __Given__ the client is attempting to delete a record that exists in the database,
+* __when__ the client performs a DELETE request to `/api/menu/categories/%d` where `%d` is any positive non-zero value,
+* __and__ the controller calls the repository [`findById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#findById-ID-) method one time passing in the ID included in the URL,
+* __and__ the `findById()` method returns an [`Optional.empty()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Optional.html#empty()),
+* __then__ the menu category controller returns a status of 404 not found.
+* __and__ the controller does **not** call the `delete()` method on the repository.
 
 
 ## Notes
