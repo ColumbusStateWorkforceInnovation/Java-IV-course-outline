@@ -23,7 +23,7 @@
 * Activites and assignments:
     * __In class group activity:__ [Create a base application and commit it to GitHub](./lab-0/README.md)
     * __Knowledge checks:__ Quiz on HTTP, REST, and APIs
-    * __LAB 1:__ [Supporting POST requests in our API](./lab-1/README.md)
+    * __LAB 1:__ [Implementing our first API method](./lab-1/README.md)
 
 
 ## Week 2 - Entity classes and the Database
@@ -43,7 +43,7 @@
     * Use a mock bean for unit testing
     * Develop a complete unit test for POST
 * Activites and assignments:
-    * __LAB 2:__ Completing our POST controller method
+    * __LAB 2:__ [Mocks, Stubs, Entities, and Persistence](./lab-2/README.md)
 
 ## Week 3 - CRUD, Profiles and Postgres
 
