@@ -108,6 +108,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 * __and__ the `menuCategory.id` property of the returned instance matches the `menuCategory.id` property returned by the repository `save()` method,
 * __and__ the `name` property of the returned instance matches the `name` property returned by the repository `save()` method,
 * __and__ the `description` property of the returned instance matches the `description` property returned by the repository `save()` method,
+* __and__ the `price` property of the returned instance matches the `price` property returned by the repository `save()` method,
 * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property returned by the repository `save()` method,
 * __and__ the menu item controller returns a status of 201 created,
 * __and__ the response contains a `Location` header with the value `http://localhost/api/menu/items/%d` where `%d` matches the `id` property returned by the repository `save()` method.
@@ -138,6 +139,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
   * __and__ the `menuCategory.id` property of the returned instance matches the `menuCategory.id` property returned by the repository `save()` method,
   * __and__ the `name` property of the returned instance matches the `name` property returned by the repository `save()` method,
   * __and__ the `description` property of the returned instance matches the `description` property returned by the repository `save()` method,
+  * __and__ the `price` property of the returned instance matches the `price` property returned by the repository `save()` method,
   * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property returned by the repository `save()` method,
 
 #### Scenario: get by ID returns a list with one item when it exists in the database
@@ -155,6 +157,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
   * __and__ the `menuCategory.id` property of the returned instance matches the `menuCategory.id` property returned by the repository `save()` method,
   * __and__ the `name` property of the returned instance matches the `name` property returned by the repository `save()` method,
   * __and__ the `description` property of the returned instance matches the `description` property returned by the repository `save()` method,
+  * __and__ the `price` property of the returned instance matches the `price` property returned by the repository `save()` method,
   * __and__ the `sortOrder` property of the returned instance matches the `sortOrder` property returned by the repository `save()` method,
 
 
