@@ -24,10 +24,10 @@ The diagram below shows the object model for the lab solution.
 
 - [ ] Add the following dependency to your `pom.xml` file:
   ```
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
-		</dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+  </dependency>
   ```
 - [ ] Right-click on your `pom.xml` file and choose "Maven > Reload Project" to refresh the project dependencies.
 
