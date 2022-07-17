@@ -16,7 +16,7 @@ This lab checks your knowledge of the content in chapter eight of the *Spring We
 
 The diagram below shows the object model for the lab solution.
 
-![Object model for completed Lab 2 assignment](./images/ObjectModel.png)
+![Object model for completed Lab 3 assignment](./images/ObjectModel.png)
 
 ## Tasks
 
