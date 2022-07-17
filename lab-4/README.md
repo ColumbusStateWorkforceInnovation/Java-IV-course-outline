@@ -8,10 +8,6 @@ This lab checks your knowledge of the content in chapters 9 and 12 of the *Sprin
 - [ ] Merge the changes in your Lab 3 pull request to your main (or master branch) if you have not already done so.
 - [ ] Create a new branch from your main (or master) branch and switch to it before committing any changes for Lab 4.
 
-## The Open API spec to implement
-
-[Click here](https://app.swaggerhub.com/apis/DataDaddy/wiit-7340_degrees_at_cscc_api/0.3) to view the spec on SwaggerHub.
-
 ## Object model of the final product
 
 The diagram below shows the object model for the lab solution.
