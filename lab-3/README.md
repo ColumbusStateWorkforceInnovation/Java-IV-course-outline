@@ -131,7 +131,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 ## Submitting your work
 
 - [ ] Verify your tests pass.
-- [ ] Commit your changes to the lab 2 branch you created.
+- [ ] Commit your changes to the lab 3 branch you created.
 - [ ] Push your new branch to GitHub.
 - [ ] Create a pull request on the new branch.
 - [ ] Add your instructor as a reviewer.

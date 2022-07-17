@@ -44,6 +44,7 @@
         * Configure our new class for mocking.
         * Use a mock bean for unit testing.
         * Develop a complete unit test for POST.
+    * Testing our application using Postman
 * Activities and assignments:
     * __LAB 2:__ [Mocks, Stubs, Entities, and Persistence](./lab-2/README.md) &mdash; Due at the start of week 3.
 
@@ -53,11 +54,13 @@
     * _Spring Web Essentials_ chapters 8 and 10 (skip 9).
 * Lecture:
     * Build read, update and delete methods for our API.
+    * Use Docker to run Postgres.
     * Learn how Spring profiles are used to support different runtime configurations.
-    * Add configuration to connect to a Postgres database.
-    * Use Spring profiles to switch between the H3 in-memory database and the external Postgres database.
+    * Add a profile to use our Postgres database.
+    * Use profiles to switch between the H3 in-memory database and the external Postgres database.
+    * Testing our application using Postman.
 * Activities and assignments:
-    * __LAB 3:__ [Read, Update, and Delete for our API](./lab-3/README.md) &mdash; Due at the start of week 5.
+    * __LAB 3:__ [Read, Update, and Delete for our API](./lab-3/README.md) &mdash; Due at the start of week 4.
 
 
 ## Week 4 - Property Validation & JPA Entity Relationships
@@ -65,9 +68,17 @@
 * Reading:
     * _Spring Web Essentials_ chapters 9 and 12 (skip 11).
 * Lecture:
-    * Use JPA relationships to associate entity classes.
+    * Spring JPA
+        * Learn how to associate entity classes using Java Persistence Architecture (JPA) relationships.
+        * Creating one-to-one, one-to-many, and many-to-one relationships.
+        * Unit testing entities with JPA relationships.
+    * Property Validation
+        * Add the dependencies to our `pom.xml` file.
+        * Learn how bean validation constraints work.
+        * Apply validation constraints to our entity classes.
+        * Create tests for invalid or missing properties.
 * Activities and assignments:
-    * __LAB 4:__ Property Validation & JPA Entity Relationships &mdash; Due at the start of week 6.
+    * __LAB 4:__ [Property Validation & JPA Entity Relationships](./lab-4/README.md) &mdash; Due at the start of week 6.
 
 
 ## Week 5 - Putting our Services to Work
