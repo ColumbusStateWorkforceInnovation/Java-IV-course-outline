@@ -94,7 +94,7 @@ Getting started:
 - [ ] Add a new interface called `edu.cscc.degrees.data.MenuItemRepository` that extends `org.springframework.data.repository.CrudRepository`.
 - [ ] Add a new unit test class called `edu.cscc.degrees.api.MenuItemControllerTests`.
 
-Add unit tests for each scenario listed below using the techniques shown in chapter nine of the *Spring Web Essentials* book. After adding a test, add just enough code to get the test to pass.
+Add unit tests for each scenario listed below using the techniques shown in chapters eight and twelve of the *Spring Web Essentials* book. After adding a test, add just enough code to get the test to pass.
 
 #### Scenario: Clients can create new menu items.
 
@@ -173,7 +173,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 * __and__ the request body contains a representation of a `MenuItem`,
 * __and__ the controller calls the repository [`existsById()`](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html#existsById-ID-) method one time passing in the ID included in the URL,
 * __and__ the `existsById()` method returns `true`,
-* __then__ the controller calls the `save()` method on the repository one time passing a menu item instance with all properties equal to those provided in the request body,
+* __then__ the controller calls the `save()` method on the repository one time passing a menu item instance with all properties equal to those provided in the request body omitting "menuCategory" from the comparison,
 * __and__ the `save()` method returns an updated version of the saved record,
 * __and__ the menu item controller returns a status of 204 no content.
 
@@ -215,7 +215,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 - [ ] Write a unit test for POST and PUT that, when null, verifies the response body contains a `fieldErrors` JSON object with a `price` property and a value of "must not be null".
 - [ ] Add a `@Size` validation constraint on `MenuItem.price` with a min size of 1 and a max of 20.
 - [ ] Write a unit test for POST and PUT that, when the length is outside these bounds, the response body contains a `fieldErrors` JSON object with a `price` property and a value of "Please enter a price up to 20 characters in length".
-- [ ] Add a unit test for PUT that verifies the `id` in the URL matches the `id` in the request body and, if not, returns a 409 CONFLICT status,
+- [ ] Add a unit test for PUT that verifies the `id` in the URL matches the `MenuItem.id` in the request body and, if not, returns a 409 CONFLICT status,
 
 
 ## Notes
