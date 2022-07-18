@@ -95,7 +95,7 @@
     * _Spring Web Essentials_ chapter 13.
 
 * Activities and assignments:
-    * __LAB 6:__ Secure the API &mdash; Due at the start of week 8.
+    * __LAB 6:__ [Securing our Application](./lab-6/README.md) &mdash; Due at the start of week 8.
 
 ## Week 7 - Server Side Websites
 
