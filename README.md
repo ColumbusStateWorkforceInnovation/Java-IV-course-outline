@@ -21,6 +21,7 @@
     * Writing our first API method:
         * Develop a unit test for posting a new blog article.
         * Implement a controller method to get our test passing.
+    * Test our application using Postman
 * Activities and assignments:
     * __In class group activity:__ [Create a base application and commit it to GitHub](./lab-0/README.md).
     * __Knowledge checks:__ Quiz on HTTP, REST, and APIs.
@@ -40,11 +41,11 @@
         * Configure Spring to use one for development.
         * Create an integration test for our POST method.
         * Use a Spring Java Persistence Architecture (JPA) repository as backing store for our blog posts.
-    * Testing with mocks:
+    * Test our controller with mocks:
         * Configure our new class for mocking.
         * Use a mock bean for unit testing.
         * Develop a complete unit test for POST.
-    * Testing our application using Postman
+    * Test our application using Postman
 * Activities and assignments:
     * __LAB 2:__ [Mocks, Stubs, Entities, and Persistence](./lab-2/README.md) &mdash; Due at the start of week 3.
 
@@ -80,12 +81,16 @@
 * Activities and assignments:
     * __LAB 4:__ [Property Validation & JPA Entity Relationships](./lab-4/README.md) &mdash; Due at the start of week 6.
 
-
 ## Week 5 - Putting our Services to Work
 
 * Reading:
     * _Spring Web Essentials_ chapter 11.
-
+* Lecture:
+    * Learn how property expressions make it easy to create Spring Data Repository queries
+    * Develop new controller methods to provide supplemental data
+    * Download and run the front end application
+    * Add Cross Origin Resource Sharing (CORS) support in our API
+    * Test our application using Postman
 * Activities and assignments:
     * __LAB 5:__ [Connecting the Front End Application](./lab-5/README.md) &mdash; Due at the start of week 7.
 
@@ -93,7 +98,14 @@
 
 * Reading:
     * _Spring Web Essentials_ chapter 13.
-
+* Lecture:
+    * Write unit tests that verify unauthenticated requests are prohibited.
+    * Add dependencies to our POM file for [Spring Security](https://spring.io/projects/spring-security), Spring security testing, and [Okta Spring Boot Starter](https://github.com/okta/okta-spring-boot).
+    * Configure our application to use Okta OAuth2.
+    * Test our changes with Postman.
+    * Update our existing unit tests to authenticate with [JSON Web Tokens (JWT)](https://tools.ietf.org/html/rfc7523).
+    * Test the secure version of our web application against the secure Spring application.
+    * Test our application using Postman
 * Activities and assignments:
     * __LAB 6:__ [Securing our Application](./lab-6/README.md) &mdash; Due at the start of week 8.
 
