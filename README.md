@@ -87,7 +87,7 @@
     * _Spring Web Essentials_ chapter 11.
 
 * Activities and assignments:
-    * __LAB 5:__ Hook up the Vue app &mdash; Due at the start of week 7.
+    * __LAB 5:__ [Connecting the Front End Application](./lab-5/README.md) &mdash; Due at the start of week 7.
 
 ## Week 6 - Securing our API
 

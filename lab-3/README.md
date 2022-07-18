@@ -4,7 +4,7 @@ This lab checks your knowledge of the content in chapter eight of the *Spring We
 
 ## Before you begin
 
-- [ ] This lab builds on the [previous one](../lab-2/README.md), so __do not start this lab__ until you have an approved pull request for Lab 1.
+- [ ] This lab builds on the [previous one](../lab-2/README.md), so __do not start this lab__ until you have an approved pull request for Lab 2.
 - [ ] Merge the changes in your Lab 2 pull request to your main (or master branch) if you have not already done so.
 - [ ] Create a new branch from your main (or master) branch and switch to it before committing any changes for Lab 3.
 

@@ -4,7 +4,7 @@ This lab checks your knowledge of the content in chapters 9 and 12 of the *Sprin
 
 ## Before you begin
 
-- [ ] This lab builds on the [previous one](../lab-3/README.md), so __do not start this lab__ until you have an approved pull request for Lab 1.
+- [ ] This lab builds on the [previous one](../lab-3/README.md), so __do not start this lab__ until you have an approved pull request for Lab 3.
 - [ ] Merge the changes in your Lab 3 pull request to your main (or master branch) if you have not already done so.
 - [ ] Create a new branch from your main (or master) branch and switch to it before committing any changes for Lab 4.
 
@@ -12,7 +12,7 @@ This lab checks your knowledge of the content in chapters 9 and 12 of the *Sprin
 
 The diagram below shows the object model for the lab solution.
 
-![Object model for completed Lab 3 assignment](./images/ObjectModel.png)
+![Object model for completed Lab 4 assignment](./images/ObjectModel.png)
 
 ## Tasks
 
@@ -87,6 +87,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 ![MenuItem class diagram](./images/MenuItem.png)
 Getting started:
 - [ ] Add a new `MenuItem` domain class with the properties and a `@ManyToOne` JPA entity relationship as shown above.
+- [ ] Add a `@NotNull` constraint on the `menuCategory` property.
 - [ ] Add a new interface called `edu.cscc.degrees.data.MenuItemRepository` that extends `org.springframework.data.repository.CrudRepository`.
 - [ ] Add a new unit test class called `edu.cscc.degrees.api.MenuItemControllerTests`.
 
