@@ -1,6 +1,6 @@
 # Lab 3 - Read, Update, and Delete for our API
 
-This lab checks your knowledge of the content in chapter eight of the *Spring Web Essentials* book.
+This lab checks your knowledge of the content in chapters eight and ten of the *Spring Web Essentials* book.
 
 ## Before you begin
 
@@ -123,6 +123,58 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 * __then__ the menu category controller returns a status of 404 not found.
 * __and__ the controller does **not** call the `delete()` method on the repository.
 
+
+### Run Postgres in Docker
+
+The tasks below check your knowledge of the content in chapter ten of the *Spring Web Essentials* book.
+
+- [ ] Run the following command in a terminal window to download and start a containerized version of Postgres:
+
+```
+docker run -p 5432:5432 --name postgres-db -d -e POSTGRES_PASSWORD=Use-a-Better-Passw0rd postgres
+```
+
+For reference:
+* Verify the container is running: `docker container ls`
+* Stop the container: `docker stop postgres-db`
+* Start the container: `docker start postgres-db`
+* Delete the container: `docker stop postgres-db; docker rm postgres-db`
+
+If you delete the container and want to run it again, use the docker run command above.
+
+### Update the project dependencies
+
+- [ ] Add the following dependency to your `pom.xml` file:
+  ```
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <version>42.4.0</version>
+</dependency>
+  ```
+- [ ] Right-click on your `pom.xml` file and choose "Maven > Reload Project" to refresh the project dependencies.
+
+
+### Create a PostgreSQL profile configuration
+
+- [ ] Create a file called `application-postgres.properties` under src > main > resources.
+- [ ] Add the following contents:
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=Use-a-Better-Passw0rd
+
+# Hibernate 
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+```
+
+### Run the application with the postgres profile active
+
+- [ ] Using the techniques decribed in the _"Run our application using the Postgres profile"_ section in chapter ten of the *Spring Web Essentials* book, activate your new profile and verify it starts correctly.
+- [ ] Test you can successfully POST new records using Postman.
+- [ ] Restart the application which would reset the H3 database.
+- [ ] Verify GET returns the records you POSTed before the restart.  If you don't get any records back, make sure you Postgres profile is active. 
 
 ## Notes
 * Check the values of all properties returned by the controller match those returned by the stubbed repository methods. 
