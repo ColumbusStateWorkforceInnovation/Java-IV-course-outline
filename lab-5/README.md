@@ -183,24 +183,25 @@ For reference, see *Spring Web Essentials*, Chapter 11, *Connecting a Single Pag
 
   ```
   sudo yum remove nodejs -y
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
   --- Open a NEW terminal window  ----
 
   nvm install --lts
   node --version
   ```
+  It should print out something like: v16.15.1. The actual version may differ slightly, but it should start with v16
 
-  It should print out something like: v14.17.5. The actual version may differ slightly, but it should start with v14
+  - [ ] Finally, run `corepack enable` to make the `yarn` package manager available.
 
 #### Download and run the web front end application 
 
 To get the web front end application running locally on your machine:
 
-- [ ] Clone [https://github.com/jeff-anderson-cscc/wiit-7340-degrees-vue-app](https://github.com/jeff-anderson-cscc/wiit-7340-degrees-vue-app.git) into a directory of your choice. 
+- [ ] Clone [https://github.com/ColumbusStateWorkforceInnovation/wiit-7340-degrees-vue-3-app](https://github.com/ColumbusStateWorkforceInnovation/wiit-7340-degrees-vue-3-app.git) into a directory of your choice. 
 - [ ] Change into the top level directory of the repo you just cloned.
-- [ ] Install the dependencies by running `npm install`. This may take some time.  __NOTE:__ If you are using Nationwide equipment, it might be necessary to run `npm config set strict-ssl false` to avoid issues with the network proxy.
-- [ ] Run `npm run serve` to launch the application.
+- [ ] Install the dependencies by running `yarn install`. This may take some time.
+- [ ] Run `yarn serve` to launch the application.
 - [ ] Once everything is running, open your browser and visit [http://localhost:8080/#/menu](http://localhost:8080/#/menu).
 
 At this point, you should see the Degrees at Columbus State website with no menu items. 
@@ -248,7 +249,7 @@ This code is identical to the example in the book with one additional path for `
 ## Submitting your work
 
 - [ ] Verify your tests pass.
-- [ ] Commit your changes to the lab 4 branch you created.
+- [ ] Commit your changes to the lab 5 branch you created.
 - [ ] Push your new branch to GitHub.
 - [ ] Create a pull request on the new branch.
 - [ ] Add your instructor as a reviewer.
