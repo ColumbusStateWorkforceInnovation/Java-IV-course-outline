@@ -4,7 +4,7 @@ This lab checks your knowledge of the content in Chapter Four of the *Spring Web
 
 ## Before you begin
 
-- [ ] This lab builds on the [previous one](../lab-0/README.md), so __do not start this lab__ until you have completed that activity.
+- [ ] This lab builds on the in-class activity [previous one](../lab-0/README.md), so __do not start this lab__ until you have completed that activity.
 - [ ] Create a new branch from your main (or master) branch and switch to it before committing any changes.
 
 ## The Open API spec to implement
