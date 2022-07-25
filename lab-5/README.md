@@ -192,7 +192,7 @@ For reference, see *Spring Web Essentials*, Chapter 11, *Connecting a Single Pag
   ```
   It should print out something like: v16.15.1. The actual version may differ slightly, but it should start with v16
 
-  - [ ] Finally, run `corepack enable` to make the `yarn` package manager available.
+- [ ] Finally, run `corepack enable` to make the `yarn` package manager available.
 
 #### Download and run the web front end application 
 
