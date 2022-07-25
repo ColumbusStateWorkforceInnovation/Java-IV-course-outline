@@ -65,4 +65,6 @@ Using the techniques shown in Chapter 4 of the *Spring Web Essentials* book, cre
 
 ## Before moving on to the next lab
 
+**Once your pull request has been approved by your instructor *and* you have submitted this lab in Blackboard using the procedure above:**
+
 - [ ] Merge your pull request to your main (or master) branch so it has all the changes you made in this lab.
