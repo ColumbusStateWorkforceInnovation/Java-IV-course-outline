@@ -124,7 +124,7 @@ Next, add our three new dependencies to our Maven POM file. If you are asked to 
 <dependency>
     <groupId>com.okta.spring</groupId>
     <artifactId>okta-spring-boot-starter</artifactId>
-    <version>2.1.0</version>
+    <version>2.1.5</version>
 </dependency>
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -268,8 +268,8 @@ Back in section 1 above, you added new tests to verify unauthenticated requests 
     ```
 - [ ] Save the changes you made in config.js.
 - [ ] Log out of Okta if you are still logged in.
-- [ ] Run `npm install` to install new dependencies.
-- [ ] Run `npm run serve` to start the application.
+- [ ] Run `yarn install` to install new dependencies.
+- [ ] Run `yarn serve` to start the application.
 - [ ] Open your browser and visit [http://localhost:8080/](http://localhost:8080/)
 
 __NOTE:__ If the page is blank, the changes you made in `config.js` are either not saved or are incorrect and must be fixed before continuing. 
@@ -292,23 +292,21 @@ Once you are logged in, you will see the original navigation options plus "Logou
 - [ ] Verify you can create, update, and delete menu items and categories while logged in.
 - [ ] Click logout and verify the application redisplays the logged out navigation.
 
-### 8. Create a pull request adding me as a reviewer
+## Submitting your work
 
-After completing all the tasks above:
+- [ ] Verify your tests pass.
+- [ ] Commit your changes to the lab 5 branch you created.
+- [ ] Push your new branch to GitHub.
+- [ ] Create a pull request on the new branch.
+- [ ] Add your instructor as a reviewer.
+- [ ] __Wait__ for your instructor to approve your pull request before submitting your work in Blackboard.
+- [ ] If changes are requested, make them and push them as extra commits on the branch you created at the start of the lab. Do *not* create a new branch or second pull request.
+- [ ] __Once your instructor has approved your pull request:__
+  - [ ] [Create a Git Bundle](https://git-scm.com/docs/git-bundle) of your work.
+  - [ ] Submit your work in Blackboard, including both:
+    1. The Git bundle you created, and 
+    2. A link to the pull request based on the work.
 
-- [ ] Commit your changes to the branch created in step 1.
-- [ ] Push your branch to GitHub.
-- [ ] [Create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) for your new branch.
-- [ ] [Request a review ](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/requesting-a-pull-request-review) from me.
+## Before moving on to the next lab
 
-__STOP HERE UNTIL THE PULL REQUEST IS APPROVED__
-
-I will provide feedback on GitHub. _If you completed your assignment on time_, I will give you up to one additional week to incorporate my feedback and improve your score. 
-
-### 9. Submit the assignment in Blackboard
-
-__WAIT UNTIL I APPROVE THE PULL REQUEST before continuing!__
-
-- [ ] Follow the procedures outlined in [Once your pull request is reviewed and approved](https://github.com/jeff-anderson-cscc/wiit-7340-lab0-completing-and-submitting-assignments#once-your-pull-request-is-reviewed-and-approved) from the [Completing and Submitting Coding Assignments Lab](https://github.com/jeff-anderson-cscc/wiit-7340-lab0-completing-and-submitting-assignments#completing-and-submitting-coding-assignments-lab)
-
-# NOTE: The images shown below are attached so they can be referenced above. This is the end of the lab.
+- [ ] Merge your pull request to your main (or master) branch, so it has all the changes you made in this lab.
