@@ -179,7 +179,7 @@ For reference, see *Spring Web Essentials*, Chapter 11, *Connecting a Single Pag
 
 - [ ] If you don't already have Node.js installed, [download](https://nodejs.org/en/download/) and install the current long term support (LTS) version. 
 
-  __NOTE:__ If you are using the Columbus State provided VM: in a terminal window, run: `node --version` and make sure you have at least version 12 installed. If not, run the following commands to upgrade your version of node: 
+  __NOTE:__ If you are using the Columbus State provided VM: in a terminal window, run: `node --version` and make sure you have at least version 16.10 installed. If not, run the following commands to upgrade your version of node: 
 
   ```
   sudo yum remove nodejs -y
