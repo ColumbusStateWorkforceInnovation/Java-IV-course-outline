@@ -244,13 +244,13 @@ Back in section 1 above, you added new tests to verify unauthenticated requests 
     
 ![test-changes](https://user-images.githubusercontent.com/46822968/79285175-4ed0c180-7eac-11ea-870a-f48a42973a70.png)
     
-- [ ] After updating *only* the tests from Lab 1 and 2 as shown above, verify all tests now pass.
+- [ ] After updating *only the tests from previous* labs (not the ones you added earlier in this lab) as shown above, verify all tests now pass.
 
  
 ## 7. Test the secure version of our web application against the secure Spring application
 
 - [ ] Make sure your Spring app is running with the postgres profile active.
-- [ ] Navigate to the directory where you stored your copy of the [Degrees Vue web application](https://github.com/jeff-anderson-cscc/wiit-7340-degrees-vue-app).
+- [ ] Navigate to the directory where you stored your copy of the [Degrees Vue web application](https://github.com/ColumbusStateWorkforceInnovation/wiit-7340-degrees-vue-3-app).
 - [ ] Run `git fetch` to sync your local copy with GitHub.
 - [ ] Run `git checkout with-okta-security` verifying it says:
     ```
