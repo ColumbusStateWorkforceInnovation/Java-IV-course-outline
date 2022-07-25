@@ -238,8 +238,8 @@ okta.oauth2.audience=api://default
 
 Back in section 1 above, you added new tests to verify unauthenticated requests fail without credentials.  These tests should now pass.
 
-- [ ] Run your unit tests verifying the tests you added in section 1 now *pass* and tests you added in Labs 1 and 2 all *fail*.
-- [ ] Update *only* the tests from Lab 1 and 2 as follows:
+- [ ] Run your unit tests verifying the tests you added in section 1 now *pass* and tests you added in previous labs all *fail*.
+- [ ] Update *only the tests from previous* labs (not the ones you added earlier in this lab) as follows:
     * Append `.with(jwt())` immediately after the HTTP method and URI such that   `mockMvc.perform(___(___))` becomes `mockMvc.perform(___(___).with(jwt()))`. For example:
     
 ![test-changes](https://user-images.githubusercontent.com/46822968/79285175-4ed0c180-7eac-11ea-870a-f48a42973a70.png)
