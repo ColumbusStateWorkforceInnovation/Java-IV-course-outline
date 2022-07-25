@@ -145,13 +145,13 @@ If you delete the container and want to run it again, use the docker run command
 ### Update the project dependencies
 
 - [ ] Add the following dependency to your `pom.xml` file:
-  ```
+```
 <dependency>
   <groupId>org.postgresql</groupId>
   <artifactId>postgresql</artifactId>
   <version>42.4.0</version>
 </dependency>
-  ```
+```
 - [ ] Right-click on your `pom.xml` file and choose "Maven > Reload Project" to refresh the project dependencies.
 
 
