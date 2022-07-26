@@ -15,7 +15,7 @@ In this lab, we will:
 - [ ] Merge the changes in your Lab 5 pull request to your main (or master branch) if you have not already done so.
 - [ ] Create a new branch from your main (or master) branch and switch to it before committing any changes for Lab 6.
 
-### Tasks
+## Tasks
 
 First, we will add ten tests to verify our controller methods are correctly secured. __At this time, add the tests and make sure they fail as indicated below.__ Do not attempt to fix any of them yet. 
 
@@ -27,7 +27,7 @@ __when__ the client performs an otherwise valid PUT, POST, or DELETE request, \
 __then__ the controller returns a status code of FORBIDDEN, \
 __and__ no changes are saved.
 
-### 2.1 in `MenuCategoryControllerTests`
+### Changes to `MenuCategoryControllerTests`
 
 - [ ] __POSTING a valid menu category without a JWT token is forbidden:__
  
@@ -71,7 +71,7 @@ __and__ no changes are saved.
     
     __Verify__ this initially does not pass with: expected 403, actual 204
 
-### 2.2 in `MenuItemRepository`
+### Changes to `MenuItemControllerTests`
 
 - [ ] __POSTING a valid menu item without a JWT token is forbidden:__
  
@@ -116,7 +116,7 @@ __and__ no changes are saved.
     __Verify__ this initially does not pass with: expected 403, actual 204
 
 
-## 3. Add dependencies to our POM file
+### Add dependencies to our POM file
 
 Next, add our three new dependencies to our Maven POM file. If you are asked to import the changes, choose to do so. 
 
@@ -137,17 +137,17 @@ Next, add our three new dependencies to our Maven POM file. If you are asked to 
 </dependency>
 ```
 
-## 4 .Configure our application to use Okta OAuth2
+### Configure our application to use Okta OAuth2
 
-### 4.1 Add OktaOAuth2WebSecurityConfigurerAdapter
+#### Add OktaOAuth2WebSecurityConfigurerAdapter
 
 - [ ] Using the code from __Create our HTTP security configuration class__ in *Spring Web Essentials*, Chapter 12, Securing our API, as a reference, add an Okta OAuth 2.0 web security configurer adapter to the `edu.cscc.degrees` package.
 
-### 4.2. Configure our Spring app to validate client tokens
+#### Configure our Spring app to validate client tokens
 
 **For help in this section, see "Configure our Spring app to validate client tokens" in Chapter 12 of *Spring Web Essentials*.**
 
-#### 4.2.1 Create the app in Okta
+#### Create the app in Okta
 
 - [ ] Log in to Okta using the developer account link provided in your welcome email.
 - [ ] From the hamburger menu, choose __Applications > Applications__
@@ -160,7 +160,7 @@ Next, add our three new dependencies to our Maven POM file. If you are asked to 
 - [ ] Click Save.
 
 
-#### 4.2.2. Add the authorization server properties
+#### Add the authorization server properties
 
 - [ ] From the hamburger menu, choose __Security > API__. Note the following from the "Authorization Servers" tab:
 
@@ -178,26 +178,26 @@ okta.oauth2.issuer=https://dev-XXXXXX.okta.com/oauth2/default
 okta.oauth2.audience=api://default
 ```
 
-## 5. Test our changes with Postman
+## Test our changes with Postman
 
-### 5.1 Testing unauthenticated access
+### Testing unauthenticated access
 
 - [ ] With the Postgres database Docker container running, start or restart your Spring application
 
-#### 5.1.1 GET localhost:3000/public/api/menus
+#### GET localhost:3000/public/api/menus
 
 - [ ] Open Postman and either create a new GET request to `localhost:3000/public/api/menus` or reuse the one you added in Lab 5. It should succeed with a status 200 and a response body with the list of menu categories and items.
 
 ![postman-get-printable-menu](https://user-images.githubusercontent.com/46822968/79277993-68690d80-7e9a-11ea-803d-de725503cac7.png)
 
-#### 5.1.2 GET localhost:3000/api/menu/categories
+#### GET localhost:3000/api/menu/categories
 - [ ] create and send a POST request to `localhost:3000/api/menu/categories`.
 
 ![unauth-get-menu-categories](https://user-images.githubusercontent.com/46822968/131423904-a41adb12-29dc-46b8-af11-e6f10135a5fa.png)
 
-### 5.2 Testing authenticated access
+### Testing authenticated access
 
-### 5.2.1 Obtain an OAuth 2.0 authorization token
+#### Obtain an OAuth 2.0 authorization token
 
 - [ ] Click on the __Authorization__ tab in the Postman request.
 - [ ] For __TYPE__, choose "OAuth 2.0".
@@ -227,14 +227,14 @@ okta.oauth2.audience=api://default
 
 ![manage-tokens](https://user-images.githubusercontent.com/46822968/79280654-673adf00-7ea0-11ea-9c08-dc95be96246d.png)
 
-#### 5.2.2 Send the authenticated request
+#### Send the authenticated request
 
 - [ ] Click "Use Token".
 - [ ] Click "Send" and verify you get a 200 status and the menu category list:
 
 ![auth-get-menu-categories](https://user-images.githubusercontent.com/46822968/131424263-80d33ad5-6689-4123-b280-3eb46cb25f22.png)
 
-## 6. Update our existing unit tests to authenticate with JWT
+### Update our existing unit tests to authenticate with JWT
 
 Back in section 1 above, you added new tests to verify unauthenticated requests fail without credentials.  These tests should now pass.
 
@@ -247,7 +247,7 @@ Back in section 1 above, you added new tests to verify unauthenticated requests 
 - [ ] After updating *only the tests from previous* labs (not the ones you added earlier in this lab) as shown above, verify all tests now pass.
 
  
-## 7. Test the secure version of our web application against the secure Spring application
+### Test the secure version of our web application against the secure Spring application
 
 - [ ] Make sure your Spring app is running with the postgres profile active.
 - [ ] Navigate to the directory where you stored your copy of the [Degrees Vue web application](https://github.com/ColumbusStateWorkforceInnovation/wiit-7340-degrees-vue-3-app).
