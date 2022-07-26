@@ -116,9 +116,9 @@ __and__ no changes are saved.
     __Verify__ this initially does not pass with: expected 403, actual 204
 
 
-### Add dependencies to our POM file
+### Update the project dependencies
 
-Next, add our three new dependencies to our Maven POM file. If you are asked to import the changes, choose to do so. 
+- [ ] Add the following dependency to your `pom.xml` file., If you are asked to import the changes, choose to do so. 
 
 ```.xml
 <dependency>
@@ -136,6 +136,9 @@ Next, add our three new dependencies to our Maven POM file. If you are asked to 
     <scope>test</scope>
 </dependency>
 ```
+
+- [ ] Right-click on your `pom.xml` file and choose "Maven > Reload Project" to refresh the project dependencies.
+
 
 ### Configure our application to use Okta OAuth2
 
@@ -257,22 +260,21 @@ Back in section 1 above, you added new tests to verify unauthenticated requests 
     Switched to branch 'with-okta-security'
     Your branch is up to date with 'origin/with-okta-security'.
     ```
-- [ ] Using an text editor, open __src > shared > config.js__.
-- [ ] Replace "enter-value-here" with values from your Okta developer console:
-    ```
-    // The Issuer URI from your Okta API Authorization Servers:
-    export const OAUTH_ISSUER = 'enter-value-here';
-    
-    // From your Okta applications list, or on the "General" tab of a specific application:
-    export const CLIENT_ID = 'enter-value-here';
-    ```
-- [ ] Save the changes you made in config.js.
+- [ ] Set your Okta configuration via environment variables:
+    - [ ] Set the Issuer URI from your Okta API Authorization Servers:
+        ```
+        export VUE_APP_OKTA_OAUTH_ISSUER='enter-value-here'
+        ```
+    - [ ] Set the client ID using the value from your Okta applications list, or on the "General" tab of your new application:
+        ``` 
+        export VUE_APP_OKTA_CLIENT_ID='enter-value-here'
+        ```
 - [ ] Log out of Okta if you are still logged in.
-- [ ] Run `yarn install` to install new dependencies.
-- [ ] Run `yarn serve` to start the application.
+- [ ] In the same terminal window where you set your environment variables, run `yarn install` to install new dependencies.
+- [ ] In the same terminal window where you set your environment variables, run `yarn serve` to start the application.
 - [ ] Open your browser and visit [http://localhost:8080/](http://localhost:8080/)
 
-__NOTE:__ If the page is blank, the changes you made in `config.js` are either not saved or are incorrect and must be fixed before continuing. 
+__NOTE:__ If the page is blank, the environment variable settings from above are incorrect and must be fixed before continuing. 
 
 It should look identical to the previous version with a new "Login" link and without the "Menu Categories" and "Menu Items" links:
  
