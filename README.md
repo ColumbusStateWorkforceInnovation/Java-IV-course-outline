@@ -33,6 +33,9 @@
 * Reading:
     * _Spring Web Essentials_ through the end of chapter 7.
 * Lecture:
+    * Demo: [HTML and web servers](https://gist.github.com/jeff-anderson-cscc/b2657d9e8bc14508bbe8a3f809f6b3dc)
+    * Review of Chapter 3 from *Spring Web Essentials*.
+    * How [Java Annotations](https://docs.oracle.com/javase/tutorial/java/annotations/) are used as a [decorator design pattern](https://learning.oreilly.com/library/view/head-first-design/0596007124/ch03.html) by Spring Boot to configure applications.
     * Adding an object model:
         * Create a blog post domain class.
         * Incorporate it into our API.
