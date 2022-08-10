@@ -1,6 +1,6 @@
 # Lab 2 - Mocks, Stubs, Entities, and Persistence
 
-This lab checks your knowledge of the content in chapters five and six of the *Spring Web Essentials* book.
+This lab checks your knowledge of the content in chapters five through seven of the *Spring Web Essentials* book.
 
 ## Before you begin
 
@@ -99,7 +99,7 @@ The diagram below shows the object model for the lab solution.
 
 ### Business logic
 
-Using the techniques shown in chapters five and six of the *Spring Web Essentials* book, replace the unit test(s) you created in the previous lab with one that checks the following:
+Using the techniques shown in chapters five through seven of the *Spring Web Essentials* book, replace the unit test(s) you created in the previous lab with one that checks the following:
 
 * __Scenario:__ Clients can create new menu categories.
 * __Given__ the menu category repository saves a new Menu Category as documented in the 
