@@ -45,7 +45,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 
 * __When__ the client performs a POST request to `/api/menu/categories`,
 * __and__ the request `contentType` is set to `application/json`,
-* __and__ the request body contains a representation of a `MenuCategory` that has a value shorter than 1 character or longer than 80 characters,
+* __and__ the request body contains a representation of a `MenuCategory` that has a `categoryTitle` value shorter than 1 character or longer than 80 characters,
 * __then__ the client receives a 400 bad request status,
 * __and__ the controller never calls the repository `save()` method,
 * __and__ the response body contains a `fieldErrors` JSON object with a `categoryTitle` property and a value of "Please enter a category title up to 80 characters in length".
@@ -76,7 +76,7 @@ Add unit tests for each scenario listed below using the techniques shown in chap
 
 * __when__ the client performs a PUT request to `/api/menu/categories/%d` where `%d` is any positive non-zero value,
 * __and__ the request `contentType` is set to `application/json`,
-* __and__ the request body contains a representation of a `MenuCategory` that has a value shorter than 1 character or longer than 80 characters,
+* __and__ the request body contains a representation of a `MenuCategory` that has a `categoryTitle` value shorter than 1 character or longer than 80 characters,
 * __and__ the `id` in the request body matches the one specified in the URL,
 * __then__ the client receives a 400 bad request status,
 * __and__ the controller never calls the repository `save()` method,
