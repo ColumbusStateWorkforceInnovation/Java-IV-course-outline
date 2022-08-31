@@ -14,6 +14,7 @@ In this lab, we will:
 - [ ] This lab builds on the [previous one](../lab-5/README.md), so __do not start this lab__ until you have an approved pull request for Lab 5.
 - [ ] Merge the changes in your Lab 5 pull request to your main (or master branch) if you have not already done so.
 - [ ] Create a new branch from your main (or master) branch and switch to it before committing any changes for Lab 6.
+- [ ] Create a developer account by going to [https://developer.okta.com/](https://developer.okta.com/) and clicking the "Sign Up" button
 
 ## Tasks
 
