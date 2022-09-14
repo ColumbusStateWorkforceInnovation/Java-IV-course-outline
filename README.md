@@ -125,11 +125,16 @@
 * Activities and assignments:
     * No new assignments.
 
-## Week 8 - Course Wrap-Up and Supplemental Resources
+## Week 8 - Deploying our Application
 
 * Reading:
     * No new reading.
 * Lecture:
+    * Containerizing our application
+    * Deploying it with Kubernetes
+    * Automating builds with AWS CodeBuild
     * Java IV Course Recap.
+* Resources:
+    * [Introduction to Kubernetes](https://github.com/jeffrey-anderson/intro-to-kubernetes)
 * Activities and assignments:
     * No new assignments.
